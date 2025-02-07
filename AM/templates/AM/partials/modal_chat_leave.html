@@ -1,0 +1,9 @@
+<!-- a_rtchat/templates/a_rtchat/partials/modal_chat_leave.html -->
+<div id="modal-chat-leave">
+    <h2>Quitter la discussion</h2>
+    <p>Êtes-vous sûr de vouloir quitter cette discussion ?</p>
+    <form method="POST" action="{% url 'chatroom_leave' chatroom_name=chat_group.group_name %}">
+        {% csrf_token %}
+        <button type="submit">Oui, quitter</button>
+    </form>
+</div>
